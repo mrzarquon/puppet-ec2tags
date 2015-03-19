@@ -3,7 +3,8 @@ Facter.add(:ec2_region)
     Facter.value(:ec2_instance_id)
   end
   setcode do
-    Facter.value("ec2_placement_availability_zone")[0..-2]
+    region = Facter.value("ec2_placement_availability_zone")[0..-2]
+    region
   end
 end
 

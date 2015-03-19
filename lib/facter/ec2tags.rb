@@ -1,4 +1,4 @@
-Facter.add(:ec2_region)
+Facter.add(:ec2_region) do
   confine do
     Facter.value(:ec2_instance_id)
   end

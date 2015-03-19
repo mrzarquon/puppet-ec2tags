@@ -19,7 +19,7 @@ Facter.add(:ec2_tags) do
   end
 
   confine do
-    Facter.value(:ec2_instance_id)
+    Facter.value(:ec2_iam_info_0)
   end
 
   setcode do

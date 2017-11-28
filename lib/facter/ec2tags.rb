@@ -11,7 +11,7 @@ end
 Facter.add(:ec2_tags) do
   confine do
     begin
-      require 'aws-sdk-core'
+      require 'aws-sdk'
       true
     rescue LoadError
       false
